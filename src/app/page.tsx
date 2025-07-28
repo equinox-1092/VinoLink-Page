@@ -3,6 +3,8 @@ import { Navbar } from "./components/navbar";
 import { DarkLight } from "./components/dark-light";
 import { Services } from "./components/Services";
 import { AboutUs } from "./components/About-us";
+import { Plans } from "./components/plans";
+import { Faq } from "./components/faq";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
         <Hero />
         <AboutUs />
         <Services />
+        <Plans />
+        <Faq />
       </main>
       <footer></footer>
     </div>
