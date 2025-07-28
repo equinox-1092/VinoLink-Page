@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatedSubscribeButton } from "@/components/magicui/animated-subscribe-button";
+import { AnimatedButton } from "@/components/magicui/animated-button";
 import { ChevronRightIcon, CheckIcon } from "lucide-react";
 
 export const Plans = () => {
@@ -34,7 +34,7 @@ export const Plans = () => {
             </li>
           </ul>
           <div className="mt-auto pt-6">
-            <AnimatedSubscribeButton className="w-40 flex justify-center items-center">
+            <AnimatedButton className="w-40 flex justify-center items-center">
             <span className="group inline-flex items-center">
               Free version
               <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -43,7 +43,7 @@ export const Plans = () => {
               <CheckIcon className="mr-2 size-4" />
               Get Started
             </span>
-            </AnimatedSubscribeButton>
+            </AnimatedButton>
           </div>
         </div>
         <div className="border border-[#0035FB] rounded-[20px] p-6 flex-1 flex flex-col hover:scale-[1.02] transition-all 0.3s ease-in-out duration-300 hover:border-[#0035FB] hover:shadow-[0_0_10px_#0035FB]">
@@ -74,7 +74,7 @@ export const Plans = () => {
             </li>
           </ul>
           <div className="mt-auto pt-6">
-            <AnimatedSubscribeButton className="w-40 flex justify-center items-center">
+            <AnimatedButton className="w-40 flex justify-center items-center">
             <span className="group inline-flex items-center">
               Plus version
               <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -83,7 +83,7 @@ export const Plans = () => {
               <CheckIcon className="mr-2 size-4" />
               Get Started
             </span>
-            </AnimatedSubscribeButton>
+            </AnimatedButton>
           </div>
         </div>
         <div className="border border-[#0035FB] rounded-[20px] p-6 flex-1 flex flex-col hover:scale-[1.02] transition-all 0.3s ease-in-out duration-300 hover:border-[#0035FB] hover:shadow-[0_0_10px_#0035FB]">
@@ -117,7 +117,7 @@ export const Plans = () => {
             </li>
           </ul>
           <div className="mt-auto pt-6">
-            <AnimatedSubscribeButton className="w-40 flex justify-center items-center">
+            <AnimatedButton className="w-40 flex justify-center items-center">
             <span className="group inline-flex items-center">
               Pro version
               <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -126,7 +126,7 @@ export const Plans = () => {
               <CheckIcon className="mr-2 size-4" />
               Get Started
             </span>
-            </AnimatedSubscribeButton>
+            </AnimatedButton>
           </div>
         </div>
       </div>
