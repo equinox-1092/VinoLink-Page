@@ -12,7 +12,7 @@ interface AnimatedSubscribeButtonProps
   className?: string;
 }
 
-export const AnimatedSubscribeButton = React.forwardRef<
+export const AnimatedButton = React.forwardRef<
   HTMLButtonElement,
   AnimatedSubscribeButtonProps
 >(
@@ -95,4 +95,4 @@ export const AnimatedSubscribeButton = React.forwardRef<
   },
 );
 
-AnimatedSubscribeButton.displayName = "AnimatedSubscribeButton";
+AnimatedButton.displayName = "AnimatedButton";
