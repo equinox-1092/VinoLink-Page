@@ -1,33 +1,53 @@
-import React from "react";
+"use client";
+import React, { useCallback } from "react";
 
 export const Navbar = () => {
+  const scrollToSection = useCallback((id: string) => {
+    const element = document.getElementById(id.toLowerCase().replace(" ", "-"));
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest",
+      });
+    }
+  }, []);
+  const menuItems = [
+    { name: "Home", id: "home" },
+    { name: "About us", id: "about" },
+    { name: "Services", id: "services" },
+    { name: "Plans", id: "plans" },
+    { name: "FAQ", id: "faq" },
+    { name: "Contact", id: "contact" },
+  ];
+
   return (
-    <div>
-      <nav>
-        <ul className="flex gap-4 justify-center items-center p-4 m-4 space-x-4">
-          {["Home", "About us", "Services", "Plans", "FAQ", "Contact"].map(
-            (item) => (
-              <li
-                key={item}
-                className="overflow-hidden group cursor-pointer"
-                style={{ height: "20px" }}
-              >
-                <div
-                  className="h-[20px] flex flex-col transition-transform duration-300"
-                  style={{ willChange: "transform" }}
+    <div className="w-full">
+      <nav className="w-full">
+        <ul className="flex flex-wrap justify-center items-center p-4 gap-x-6 gap-y-2">
+          {menuItems.map((item) => {
+            const handleClick = (e: React.MouseEvent) => {
+              e.preventDefault();
+              scrollToSection(item.id);
+            };
+
+            return (
+              <li key={item.id} className="h-5 overflow-hidden group">
+                <a
+                  href={`#${item.id}`}
+                  onClick={handleClick}
+                  className="inline-flex flex-col h-5 leading-5"
                 >
-                  {/*texts of the navbar */}
-                  <span className="flex h-[20px] items-center group-hover:-translate-y-[20px] transition-transform duration-300">
-                    {item}
+                  <span className="h-5 flex items-center transition-transform duration-300 group-hover:-translate-y-5">
+                    {item.name}
                   </span>
-                  {/* with the effect of the hover and the color of the text */}
-                  <span className="flex h-[20px] items-center text-blue-600 group-hover:-translate-y-[20px] transition-transform duration-300">
-                    {item}
+                  <span className="h-5 flex items-center text-blue-600 transition-transform duration-300 group-hover:-translate-y-5">
+                    {item.name}
                   </span>
-                </div>
+                </a>
               </li>
-            )
-          )}
+            );
+          })}
         </ul>
       </nav>
     </div>
