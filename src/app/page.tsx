@@ -29,7 +29,7 @@ export default function Home() {
           <Hero />
         </section>
         
-        <section id="about" className="py-24 bg-gray-50 dark:bg-gray-900/50 scroll-mt-20">
+        <section id="about" className="py-24 scroll-mt-20">
           <div className="container mx-auto px-4">
             <AboutUs />
           </div>
@@ -41,7 +41,7 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="plans" className="py-24 bg-gray-50 dark:bg-gray-900/50 scroll-mt-20">
+        <section id="plans" className="py-24 scroll-mt-20">
           <div className="container mx-auto px-4">
             <Plans />
           </div>
@@ -53,14 +53,14 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="contact" className="py-24 bg-gray-50 dark:bg-gray-900/50 scroll-mt-20">
+        <section id="contact" className="py-24 scroll-mt-20">
           <div className="container mx-auto px-4">
             <Contact />
           </div>
         </section>
       </main>
       
-      <footer className="py-8  dark:bg-gray-900/80 dark:text-white">
+      <footer className="py-8">
         <div className="container mx-auto px-4 text-center">
           <p>© {new Date().getFullYear()} VinoLink. Todos los derechos reservados.</p>
         </div>
